@@ -1,4 +1,11 @@
 function slugify(title) {
-  const link = ``;
-  let titleToLower = title.toLowerCase();
+  const titleToLower = title.toLowerCase();
+  const splitSlug = titleToLower.split(` `);
+  const slug = splitSlug.join(`-`);
+  return slug;
 }
+
+console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
